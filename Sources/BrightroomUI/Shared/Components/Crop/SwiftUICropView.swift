@@ -72,6 +72,7 @@ public struct SwiftUICropView: UIViewControllerRepresentable {
   
   public func makeUIViewController(context: Context) -> _PixelEditor_WrapperViewController<CropView> {
     let view = factory()
+    view.setCroppingAspectRatio(.square)
     view.isAutoApplyEditingStackEnabled = true
     
     let controller = _PixelEditor_WrapperViewController.init(bodyView: view)
